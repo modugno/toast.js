@@ -1,5 +1,5 @@
 # Toast.js
-Message Toast created with Javscript EC6
+Message Toast created with Javscript ES6
 
 ## DEMO
 I know you want to see how it works first hehehe

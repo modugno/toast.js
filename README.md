@@ -2,7 +2,7 @@
 Message Toast created with Javscript EC6
 
 ## 1 - Download
-You can [download here](https://github.com/modugno/ion2-youtube/archive/master.zip)  or by cloning the project
+You can [download here](https://github.com/modugno/toast.js/archive/master.zip)  or by cloning the project
 ```cmd
 git clone https://github.com/modugno/toast.js.git
 ```

@@ -1,6 +1,10 @@
 # Toast.js
 Message Toast created with Javscript EC6
 
+## DEMO
+I know you want to see how it works first hehehe
+[Click here to view](https://github.com/modugno/toast.js/archive/master.zip)
+
 ## 1 - Download
 You can [download here](https://github.com/modugno/toast.js/archive/master.zip)  or by cloning the project
 ```cmd

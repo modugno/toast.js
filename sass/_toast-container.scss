@@ -1,0 +1,50 @@
+#toast-container {
+	position: fixed;
+	display: block;
+	z-index: 10000;
+	width: auto;
+	max-width: 50%;
+	right: 0;
+	top: 20%;
+}
+
+.toast {
+	visibility: hidden;
+	position: relative;
+	width: auto;
+	padding: 1em;
+	border: none;
+	margin-top: 1em;
+	right: 2em;
+	color: #fff;
+
+	@include transicao(all 0.3s ease);
+	
+	&.show {
+		visibility: visible;
+
+		-webkit-animation: fadein 0.4s, fadeout 0.4s 4.6s;
+		-moz-animation: fadein 0.4s, fadeout 0.4s 4.6s;
+		animation: fadein 0.4s, fadeout 0.4s 4.6s;
+	}
+
+	/*success*/
+	&-success {
+		background: #00cc99;
+	}
+
+	/*error*/
+	&-error {
+		background: #c11a1a;
+	}
+
+	/*info*/
+	&-info {
+		background: #89c6de;
+	}
+
+	/*warning*/
+	&-warning {
+		background: #f59e25;
+	}
+}

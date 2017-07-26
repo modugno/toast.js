@@ -7,7 +7,7 @@
 class Toast {
 
 	/**
-	 * Mensagem de Sucesso
+	 * Success Message
 	 */
 	static success(msg) {
 		window.event.preventDefault();
@@ -15,7 +15,7 @@ class Toast {
 	}
 
 	/**
-	 * Mensagem de Erro
+	 * Error Message
 	 */
 	static error(msg) {
 		window.event.preventDefault();
@@ -23,7 +23,7 @@ class Toast {
 	}
 
 	/**
-	 * Mensagem de Informação
+	 * Info Message
 	 */
 	static info(msg) {
 		window.event.preventDefault();
@@ -31,7 +31,7 @@ class Toast {
 	}
 
 	/**
-	 * Mensagem de Avisos
+	 * Warning Message
 	 */
 	static warning(msg) {
 		window.event.preventDefault();
@@ -39,31 +39,30 @@ class Toast {
 	}
 
 	/**
-	 * Cria o Toast
-	 * @param  {[type]} msg        Mensagem a ser exibida
-	 * @param  {[type]} toastClass classe para ser utilizada
+	 * Create Toast
+	 * @param  String msg        Message Text
+	 * @param  String toastClass css class to be use
 	 */
 	static _createToast(msg, toastClass) {
 
-		// cria o container
 		this._createContainer();
 		
-		// cria o toast
+		// create toast
 		this.toast = document.createElement('div');
 		this.toast.classList.add('toast');
 		this.toast.textContent = msg;
 
-		// adiciona o toast ao container
+		// add to toast container
 		this.toastContainer.appendChild(this.toast);
 
-		// adiciona a classe de exibição no toast
+		// add css class toast
 		this.toast.classList.add('show', 'toast-' + toastClass);
 
 		setTimeout(() => {
-			// pega todos os toats da tela
+			// get all toast from screen
 			let allToast = document.querySelectorAll('.toast');
 
-			// remove da tela
+			// remove toast
 			allToast[0].classList.remove('show');
 			allToast[0].parentNode.removeChild(allToast[0]);
 			
@@ -72,14 +71,14 @@ class Toast {
 	}
 
 	/**
-	 * Cria o ToastContainer
-	 * @return {[type]} [description]
+	 * Create ToastContainer
+	 * @return void
 	 */
 	static _createContainer() {
 		// pega o container no DOM
 		this.toastContainer = document.querySelector('#toast-container');
 
-		// se ele não existir, cria um
+		// Does not exist, create one
 		if (this.toastContainer == null) {
 			this.toastContainer = document.createElement('div');
 			this.toastContainer.id = 'toast-container';

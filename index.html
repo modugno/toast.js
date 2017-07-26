@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="dist/toast.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>Toast.JS</title>
+    <style>
+        .footer {
+            margin-top: 1.2em;
+            padding-top: 1.2em;
+            color: #777;
+            border-top: 1px solid #e5e5e5;
+        }
+    </style>
 </head>
 <body>
     
@@ -14,16 +22,51 @@
         <div class="page-header">
             <h1>Toast.js</h1>
             <p class="lead">Message Toast created with Javscript EC6</p>
+            <div>
+                <a class="github-button" href="https://github.com/modugno/toast.js/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download modugno/toast.js on GitHub">Download</a>
+                <a class="github-button" href="https://github.com/modugno/toast.js/fork" data-icon="octicon-repo-forked" aria-label="Fork modugno/toast.js on GitHub">Fork</a>
+                <a class="github-button" href="https://github.com/modugno/toast.js" data-icon="octicon-mark-github" aria-label="Documentation on Github">Documentation</a>
+            </div>
         </div>
-        <button class="btn btn-success success">Success</button>    
-        <button class="btn btn-info info">Information</button>    
-        <button class="btn btn-warning warning">Warning</button>    
-        <button class="btn btn-danger error">Error</button>    
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Click to Preview</h3>
+                <button class="btn btn-success success">Success</button>    
+                <button class="btn btn-info info">Information</button>    
+                <button class="btn btn-warning warning">Warning</button>    
+                <button class="btn btn-danger error">Error</button>    
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2017 - Created by <a href="https://modugno.github.io/" target="_blank">Guilherme Modugno</a></p>
+        </footer>
     </div>
     
     <script src="dist/toast.js"></script>
     <script>
         
+        // btn
+        let success = document.querySelector('.success');
+        let info    = document.querySelector('.info');
+        let warning = document.querySelector('.warning');
+        let error   = document.querySelector('.error');
+        
+        // success
+        success.addEventListener('click', () => Toast.success('Success Message'));
+        
+        // info
+        info.addEventListener('click', () => Toast.info('Info Message'));
+        
+        // warning
+        warning.addEventListener('click', () => Toast.warning('Warning Message'));
+        
+        // error
+        error.addEventListener('click', () => Toast.error('Error Message'));
+        
     </script>
+    
+    <!-- github scripts -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>
